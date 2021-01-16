@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+}
+
+.mini-card-display {
+}
+
+.card-detail-display {
+}
+
+
+.card-items {
+    list-style: none;
+    text-decoration: none;
+    font: inherit;
+    color: inherit  
+}
+

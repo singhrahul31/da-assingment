@@ -1,0 +1,45 @@
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 25rem 15rem 15rem;
+    border: 1px solid black;
+}
+
+.user-details {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.main-image {
+    border: 1px solid #413131;
+    background-color:  #413131;
+    justify-content: flex-start;
+    width:50%;
+    height:100%;
+}
+
+.main-image img {
+    text-align: center;
+    height: 10rem;
+    width:10rem;
+}
+
+.main-info {
+    justify-content: flex-end;
+}
+
+
+
+.friends-list {
+    border: 1px solid black;
+    display: flex;
+
+}
+
+
+.friends-of-friend {
+    border: 1px solid black;
+    display: flex;
+
+}
