@@ -1,27 +1,33 @@
 <div class="container">
-    <section class="user-details">
-        <div class="main-image">
-            <img  src="{{userDetail.image}}" alt="{{userDetail.name}}">
-        </div>      
-        <div class="main-info">
-            <h1>Name: {{userDetail.name}}</h1>
-            <h2>City: {{userDetail.city}}</h2>
-        </div>
-    </section>
-    <section class="friends-list">
-        <p>friends list</p>
-        <div class="card-items" *ngFor="let user of friendsList; let index = i">
-            <app-mini-card [singleUser]="user" (onClick)="showUser()">
-            </app-mini-card>
-        </div>
-    </section>
-    <section class="friends-of-friend">
-        <p>friend suggesstion</p>
-        <div class="card-items" *ngFor="let user of friendsSuggestion; let index = i">
-            <app-mini-card [singleUser]="user" (onClick)="showUser()">
-            </app-mini-card>
-        </div>
-    </section>
+  <section class="user-details">
+    <div class="main-image">
+      <img src="{{ userDetail.image }}" alt="{{ userDetail.name }}" />
+    </div>
+    <div class="main-info">
+      <h1>
+        Name: <span>{{ userDetail.name }}</span>
+      </h1>
+      <h2>
+        City: <span>{{ userDetail.city }}</span>
+      </h2>
+    </div>
+    <div class="close-box" (click)="closeDisplay()">
+      <span class="deleteMeetingClose">&times;</span>
+    </div>
+  </section>
+  <section class="friends-list">
+    <p class="sub-heading">Friend's List</p>
+    <div class="card-items" *ngFor="let user of friendsList; let index = i">
+      <app-mini-card [singleUser]="user"> </app-mini-card>
+    </div>
+  </section>
+  <section class="friends-of-friend">
+    <p class="sub-heading">Friend Suggesstions</p>
+    <div
+      class="card-items"
+      *ngFor="let user of friendsSuggestion; let index = i"
+    >
+      <app-mini-card [singleUser]="user"> </app-mini-card>
+    </div>
+  </section>
 </div>
-
-

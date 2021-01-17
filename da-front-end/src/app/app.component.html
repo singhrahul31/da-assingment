@@ -1,8 +1,7 @@
 <div class="main">
   <div class="mini-card-display">
     <a class="card-items" *ngFor="let user of users; let index = i">
-      <app-mini-card [singleUser]="user" (onClick)="showUser()">
-      </app-mini-card>
+      <app-mini-card [singleUser]="user"></app-mini-card>
     </a>
   </div>
   <div class="card-detail-display">

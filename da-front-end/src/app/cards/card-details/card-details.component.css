@@ -1,45 +1,59 @@
 .container {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 25rem 15rem 15rem;
-    border: 1px solid black;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 25rem 15rem 15rem;
+  border: 1px solid black;
+}
+
+.deleteMeetingClose {
+  font-size: 3rem;
+  cursor: pointer;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
 }
 
 .user-details {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: row;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: row;
 }
 
 .main-image {
-    border: 1px solid #413131;
-    background-color:  #413131;
-    justify-content: flex-start;
-    width:50%;
-    height:100%;
+  border: 1px solid #413131;
+  background-color: #413131;
+  justify-content: flex-start;
+  width: 50%;
+  height: 100%;
 }
 
-.main-image img {
-    text-align: center;
-    height: 10rem;
-    width:10rem;
+.main-image > img {
+  height: 10rem;
+  width: 10rem;
 }
 
 .main-info {
-    justify-content: flex-end;
+  justify-content: flex-end;
+  margin: auto;
+  font-size: 2rem;
 }
 
+.main-info span {
+  font-family: "Times New Roman", Times, serif;
+}
 
+.sub-heading {
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
 
 .friends-list {
-    border: 1px solid black;
-    display: flex;
-
+  border: 1px solid black;
+  display: flex;
 }
 
-
 .friends-of-friend {
-    border: 1px solid black;
-    display: flex;
-
+  border: 1px solid black;
+  display: flex;
 }

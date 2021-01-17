@@ -1,0 +1,41 @@
+
+## user creation
+create table users(
+   id VARCHAR(20) not null primary KEY,
+   name VARCHAR(50) not NULL,
+   city varchar(50) not null
+)
+
+
+
+
+## mapping friend with user
+create table friends(
+    user_id varchar(20),
+    friend_id VARCHAR(20)
+)
+
+
+## creating join table for friends & friend of friends
+create table friend_of_friends as (
+SELECT u1.id user_id,
+        u1.name user_name,
+        u1.city user_city,
+       u2.id   friend_id, 
+       u2.NAME friend_name, 
+       u2.city friend_city, 
+       u3.id   friend_suggested_id, 
+       u3.NAME friend_suggested_name, 
+       u3.city friend_suggested_city 
+FROM   users u1 , 
+       users u2, 
+       friends F, 
+       users u3, 
+       friends f2 
+WHERE  u1.id = f.user_id 
+       AND f.friend_id = u2.id 
+       AND u2.id = f2.user_id 
+       AND f2.friend_id = u3.id 
+       AND u1.id <> u3.id 
+ORDER  BY u1.NAME, 
+          u3.city)
